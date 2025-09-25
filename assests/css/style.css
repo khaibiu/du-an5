@@ -2,14 +2,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --premium-color:#171100;
-    --primary-color: #ffb900;
-    --text-color: #5F5B53;
-    
-    --font-heading: "sen", sans-serif;
-}
-
 html {
     font-size: 65.5%;
 }
@@ -19,8 +11,28 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+    --premium-color:#171100;
+    --primary-color: #ffb900;
+    --text-color: #5F5B53;
+    --white-color: #ffffff;
+    --main-color:#FFFCF4;
+    
+    --font-heading: "sen", sans-serif;
+}
+
+
 a {
     text-decoration: none;
+}
+
+.heading-lv2 {
+    color: var(--premium-color);
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    line-height: 1.27;
+    font-weight: 700;
+    letter-spacing: -0.76px
 }
 
 .btn {
@@ -28,12 +40,19 @@ a {
     padding: 4px 16px;
     line-height: 46px;
     min-width: 118px;
-    color: #fff;
+    color: var(--white-color);
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
     border-radius: 999px;
     background: var(--premium-color);
+    cursor: pointer;
+}
+
+.desc {
+    color: var(--text-color);
+    font-size: 1.4rem;
+
 }
 
 .btn:hover {
@@ -48,7 +67,7 @@ a {
 }
 
 .header {
-    background-color: #FFFCF4;
+    background-color: var(--main-color);
 }
 
 .header.fixed {
@@ -111,7 +130,7 @@ a {
 /* ==========hero========== */
 .hero {
     padding: 56px 0 65px;
-    background-color: #FFFCF4;
+    background-color: var(--main-color);
 }
 
 .hero .body {
@@ -137,7 +156,7 @@ a {
     position: absolute;
     padding: 16px 20px;
     width: 270px;
-    background-color: #fff;
+    background-color: var(--white-color);
     border-radius: 12px;
     box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1);
     bottom: 36px;
@@ -241,7 +260,7 @@ a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #ffffff;
+    background: var(--white-color);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -270,4 +289,126 @@ a {
 
 .hero .desc-recent strong:nth-child(2) {
     margin-left: 28px;
+}
+
+/* popular */
+.popular {
+    padding: 154px 0 152px;
+    background-color: var(--white-color);
+}
+
+.popular .popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-top .desc {
+    font-size: 1.7rem;
+    line-height: 1.67;
+    font-family: Poppins;
+    color: var(--text-color);
+    margin-top: 16px;
+    width: 458px;
+}
+
+.popular-top .control {
+    display: flex;
+    gap: 18px;
+}
+
+.popular-top .contol-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border:1px solid var(--primary-color);
+    height: 40px;
+    width: 40px;
+    border-radius: 999px;
+    color: var(--primary-color);
+}
+
+.popular-top .contol-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.popular .course-list {
+    display: flex;
+    margin-top: 55px;
+    gap: 30px;
+}
+
+.popular .course-item {
+    width: 33.3333%;
+    border: 1px solid #E2DFDA;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--white-color);
+}
+
+.popular .course-item:hover {
+    border: 1px solid transparent;
+
+    box-shadow: 0px 18px 36px 0px #0000000D;
+}
+
+.popular .course-item .thumb {
+    width: 100%;
+    object-fit: cover;
+    height: 278px;
+}
+
+.popular .course-item .info {
+    padding:16px 22px 22px;
+}
+
+.popular .course-item .rating,
+.popular .course-item .foot,
+.popular .course-item .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.popular .course-item .title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.popular .course-item .value {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--primary-color);
+    margin: 6px;
+
+}
+
+.popular .course-item .desc {
+    line-height: 1.86;
+    margin-top: 6px;
+}
+
+.popular .course-item .foot {
+    margin-top: 12px;
+}
+
+.popular .course-item .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: var(--premium-color);
+}
+
+.popular .course-item .btn-book {
+    border: none;
+}
+
+.popular .course-item .btn-book:hover {
+    background-color: var(--primary-color);
 }
